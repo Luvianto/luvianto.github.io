@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-banner {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-image: url('../images/profile-banner.png');
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -75px;
+    border: 5px solid white;
+}
+
+.profile-name{
+    margin-top: 8px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.profile-job{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
