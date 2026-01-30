@@ -1,5 +1,5 @@
 :root {
-  --primary: #00abe4;
+  --primary: #006e92;
   --surface: #e9f1fa;
 }
 
@@ -19,6 +19,8 @@ body {
   min-height: 200vh;
 }
 
+/* Navbar starts */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,7 +28,7 @@ body {
   /* Padding "a little to the left" 
   because the trailing is disabled on desktop */
   padding: 1.4rem 14% 1.4rem 7%;
-  background-color: var(--primary);
+  background-color: rgba(0, 171, 228, 0.8);
   border-bottom: 1px solid #00bfff;
   /* To make Navbar stays on top */
   position: fixed;
@@ -39,7 +41,7 @@ body {
 .navbar .navbar-title {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--surface);
+  color: #fff;
 }
 
 .navbar .navbar-nav a {
@@ -49,11 +51,34 @@ body {
   margin: 0 1rem;
 }
 
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
 .navbar .navbar-trailing a {
   color: #fff;
   margin: 0 0.5rem;
 }
 
+.navbar .navbar-trailing a:hover {
+  color: var(--primary);
+}
+
 #hamburger-menu {
   display: none;
 }
+
+/* Navbar ends */
