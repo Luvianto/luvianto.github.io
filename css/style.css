@@ -16,14 +16,30 @@
 body {
   background-color: var(--surface);
   color: #fff;
+  min-height: 200vh;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 7%;
+  /* Padding "a little to the left" 
+  because the trailing is disabled on desktop */
+  padding: 1.4rem 14% 1.4rem 7%;
   background-color: var(--primary);
+  border-bottom: 1px solid #00bfff;
+  /* To make Navbar stays on top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--surface);
 }
 
 .navbar .navbar-nav a {
@@ -36,4 +52,8 @@ body {
 .navbar .navbar-trailing a {
   color: #fff;
   margin: 0 0.5rem;
+}
+
+#hamburger-menu {
+  display: none;
 }
