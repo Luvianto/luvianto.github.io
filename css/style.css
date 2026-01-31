@@ -1,6 +1,7 @@
 :root {
   --primary: #006e92;
   --surface: #e9f1fa;
+  --onSurface: #00bfff;
 }
 
 * {
@@ -14,8 +15,8 @@
 }
 
 body {
-  background-color: var(--surface);
   color: #fff;
+  background-color: var(--surface);
   min-height: 200vh;
 }
 
@@ -25,12 +26,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Padding "a little to the left" 
-  because the trailing is disabled on desktop */
+  /* Padding "a little to the left" to make it look centered
+  because the navbar trailing is disabled on desktop view */
   padding: 1.4rem 14% 1.4rem 7%;
   background-color: rgba(0, 171, 228, 0.8);
-  border-bottom: 1px solid #00bfff;
-  /* To make Navbar stays on top */
+  border-bottom: 1px solid var(--onSurface);
+  /* To make Navbar stays on top even while scrolling*/
   position: fixed;
   top: 0;
   left: 0;
@@ -39,9 +40,9 @@ body {
 }
 
 .navbar .navbar-title {
+  color: #fff;
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
 }
 
 .navbar .navbar-nav a {
@@ -82,6 +83,69 @@ body {
 }
 
 /* Navbar ends */
+
+/* Home starts */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(233, 241, 250, 1) 8%,
+    rgba(233, 241, 250, 0) 50%
+  );
+}
+
+.home .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.home .content h1 {
+  color: #fff;
+  font-size: 5em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.home .content h1 span {
+  color: var(--onSurface);
+}
+
+.home .content .cta {
+  color: #fff;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  background-color: var(--onSurface);
+  border-radius: 0.5rem;
+}
+
+.home .content p {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+}
+
+/* Home ends */
 
 /* Media queries starts */
 
