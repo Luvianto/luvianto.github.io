@@ -1,7 +1,7 @@
 :root {
-  --primary: #006e92;
+  --onSurface: #006e92;
   --surface: #e9f1fa;
-  --onSurface: #00bfff;
+  --primary: #00bfff;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
   because the navbar trailing is disabled on desktop view */
   padding: 1.4rem 14% 1.4rem 7%;
   background-color: rgba(0, 171, 228, 0.8);
-  border-bottom: 1px solid var(--onSurface);
+  border-bottom: 1px solid var(--primary);
   /* To make Navbar stays on top even while scrolling*/
   position: fixed;
   top: 0;
@@ -53,14 +53,14 @@ body {
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--primary);
+  color: var(--onSurface);
 }
 
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary);
+  border-bottom: 0.1rem solid var(--onSurface);
   transform: scaleX(0);
   transition: 0.2s linear;
 }
@@ -75,7 +75,7 @@ body {
 }
 
 .navbar .navbar-trailing a:hover {
-  color: var(--primary);
+  color: var(--onSurface);
 }
 
 #hamburger-menu {
@@ -124,7 +124,7 @@ body {
 }
 
 .home .content h1 span {
-  color: var(--onSurface);
+  color: var(--primary);
 }
 
 .home .content .cta {
@@ -133,7 +133,7 @@ body {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.4rem;
-  background-color: var(--onSurface);
+  background-color: var(--primary);
   border-radius: 0.5rem;
 }
 
@@ -146,6 +146,60 @@ body {
 }
 
 /* Home ends */
+
+/* About starts */
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  color: var(--onSurface);
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .row .about-img {
+  flex: 1 1 20rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.about .row .left-content,
+.about .row .right-content {
+  flex: 1 1 35rem;
+  padding: 0 2rem;
+}
+
+.about .row .left-content h3,
+.about .row .right-content h3 {
+  color: var(--onSurface);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .left-content h3,
+.about .row .left-content p {
+  text-align: end;
+}
+
+.about .row .left-content p,
+.about .row .right-content p {
+  color: #000;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
 
 /* Media queries starts */
 
@@ -185,7 +239,7 @@ body {
   }
 
   .navbar .navbar-nav a {
-    color: #00bfff;
+    color: var(--primary);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
