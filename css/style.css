@@ -22,24 +22,24 @@ body {
 
 /* Navbar starts */
 
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* Padding "a little to the left" to make it look centered
+  align-items: center; */
+/* Padding "a little to the left" to make it look centered
   because the navbar trailing is disabled on desktop view */
-  padding: 1.4rem 14% 1.4rem 7%;
+/* padding: 1.4rem 14% 1.4rem 7%;
   background-color: rgba(0, 171, 228, 0.8);
-  border-bottom: 1px solid var(--primary);
-  /* To make Navbar stays on top even while scrolling*/
-  position: fixed;
+  border-bottom: 1px solid var(--primary); */
+/* To make Navbar stays on top even while scrolling*/
+/* position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-}
+} */
 
-.navbar .navbar-title {
+/* .navbar .navbar-title {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
@@ -80,13 +80,13 @@ body {
 
 #hamburger-menu {
   display: none;
-}
+} */
 
 /* Navbar ends */
 
 /* Home starts */
 
-.home {
+/* .home {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -143,7 +143,7 @@ body {
   margin-top: 1rem;
   line-height: 1.4;
   font-weight: 300;
-}
+} */
 
 /* Home ends */
 
@@ -165,17 +165,13 @@ body {
 /* About starts */
 
 .about .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
+  justify-content: center;
 }
 
 .about .row .about-img {
-  flex: 1 1 20rem;
-}
-
-.about .row #about-img-sm {
-  display: none;
+  max-width: 20rem;
+  margin: auto;
 }
 
 .about .row .about-img img {
@@ -188,10 +184,23 @@ body {
   padding: 0 2rem;
 }
 
+.about .row .content li {
+  min-width: none;
+  box-sizing: border-box;
+}
+
+.about .row .content ul {
+  color: var(--onSurface);
+}
+
+.about .row .content span {
+  color: var(--onSurface);
+}
+
 .about .row .content h3 {
   color: var(--onSurface);
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .about .row #left-content {
@@ -263,7 +272,7 @@ body {
     font-size: 62.5%;
   }
 
-  #hamburger-menu {
+  /* #hamburger-menu {
     display: inline-block;
   }
 
@@ -299,30 +308,20 @@ body {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
-  }
+  } */
 
   .about .row {
     display: block;
   }
 
-  .about .row #about-img-sm {
+  .about .row #about-img {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
   }
 
-  .about .row #about-img-sm img {
+  .about .row #about-img img {
     max-width: 25rem;
-  }
-
-  .about .row #about-img-lg {
-    display: none;
-  }
-
-  .about .row #left-content,
-  .about .row #right-content {
-    text-align: center;
-    margin-bottom: 2rem;
   }
 
   .project .row .project-card img {
