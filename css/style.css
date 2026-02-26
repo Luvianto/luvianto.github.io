@@ -54,10 +54,12 @@ body {
 .about .row .content {
   flex: 1 1 35rem;
   padding: 0 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .about .row .content ul {
   color: var(--onSurface);
+  margin-bottom: 1.2rem;
 }
 
 .about .row .content span {
@@ -71,17 +73,13 @@ body {
 }
 
 .about .row .content h4 {
+  color: var(--onSurface);
   font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.about .row #left-content {
-  text-align: end;
+  font-weight: 400;
 }
 
 .about .row .content p {
   color: #000;
-  margin-bottom: 1.2rem;
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.8;
